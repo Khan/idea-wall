@@ -1,0 +1,159 @@
+html {
+	height: 100%;
+	margin: 0px;
+}
+
+body {
+	font-family: "Proxima Nova", "Helvetica", sans-serif;
+	height: 100%;
+	margin: 0px;
+}
+
+#board {
+	width: 100%;
+	height: 100%;
+	height: 42in;
+	width: 72in;
+	border: 1px solid gray;
+}
+
+#title {
+	position: absolute;
+	top: 2in;
+	left: 2in;
+	font-size: 2in;
+	color: #222;
+	font-weight: 100;
+}
+
+#explanation {
+	position: absolute;
+	top: 5in;
+	left: 2in;
+	width: 8in;
+	font-size: 0.5in;
+}
+
+.aspect {
+	position: absolute;
+	top: 2.75in;
+	width: 12in;
+}
+
+.aspect h1 {
+	font-size: 1.25in;
+	color: #444;
+	font-weight: 100;
+}
+
+.substance {
+	left: 17in;
+}
+
+.form {
+	left: 28in;
+}
+
+.questioning-questions {
+	left: 36.5in;
+}
+
+.keeping-score {
+	left: 48in;
+}
+
+.how-we-work {
+	left: 60in;
+}
+
+.sticky {
+	position: absolute;
+	width: 3in;
+	height: 3in;
+	padding: 20px;
+	border-radius: 3px;
+
+	background-color: pink;
+}
+
+h1 {
+	font-size: 0.4in;
+	font-weight: normal;
+	width: 100%;
+	min-height: 30px;
+	margin: 0;
+}
+
+.sticky textarea {
+	border-style: none;
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	width: 100%;
+	height: 50%;
+	outline: 0;
+	margin: 0;
+	padding: 0;
+	resize: none;
+}
+
+.sticky textarea:hover {
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.sticky .delete {
+	display: none;
+}
+
+.sticky:hover .delete {
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: -2px;
+	background: transparent;
+	border-style: none;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.sticky:hover img {
+	width: 20px;
+	height: 20px;
+}
+
+.sticky .source {
+	position: absolute;
+	bottom: 20px;
+	height: auto;
+	width: 90%;
+	color: #666;
+}
+
+.sticky .source a {
+	color: inherit;
+	cursor: pointer;
+}
+
+.sticky .source div {
+	vertical-align: bottom;
+}
+
+.sticky .source:hover {
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+// HAX:
+.ql-tooltip {
+	white-space: normal;
+}
+
+.ql-container {
+	padding: 0 !important;
+	font-family: inherit !important;
+	overflow: visible !important;
+}
+
+.hide-tooltip .ql-tooltip {
+	display: none
+}

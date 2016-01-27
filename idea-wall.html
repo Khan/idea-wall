@@ -1,0 +1,40 @@
+<head>
+  <title>idea-wall</title>
+</head>
+
+<body>
+  <div id="title">Idea Wall</div>
+  <div id="explanation">
+    <p>This is where an explanation of what this is all about goes. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat ante vitae mauris porttitor feugiat. Mauris placerat luctus euismod. Nullam lobortis turpis sed lectus dapibus, et eleifend tortor euismod. Ut ac augue massa. Ut vel justo et velit fermentum pellentesque a sit amet nisi.</p>
+    <p>In nulla eros, aliquet et lectus in, congue facilisis velit. Etiam semper nunc eu lacus consectetur, sed rutrum est commodo. Etiam dapibus blandit efficitur. Aliquam convallis nulla auctor ultricies placerat. Curabitur ex tortor, gravida eu lectus eu, molestie convallis quam. Suspendisse potenti. Nam vel dignissim dui, ut accumsan nunc.</p>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec scelerisque eu metus ullamcorper maximus.</p>
+  </div>
+  <div class="aspect substance"><h1>Substance</h1></div>
+  <div class="aspect form"><h1>Form</h1></div>
+  <div class="aspect questioning-questions"><h1>Questioning Questions</h1></div>
+  <div class="aspect keeping-score"><h1>Keeping Score</h1></div>
+  <div class="aspect how-we-work"><h1>How We Work</h1></div>
+  {{> board}}
+</body>
+
+<template name="board">
+  <div id="board">
+    {{#each stickies}}
+      {{> sticky}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="sticky">
+  <div class="sticky" style="left: {{x}}px; top: {{y}}px" id={{_id}}>
+    <button class="delete"><img src="x.png" /></button>
+    <h1>
+      <!-- {{#if isEditing}} -->
+        <form><textarea class="label" type="text">{{label}}</textarea></form>
+<!--       {{else}}
+        {{label}}
+      {{/if}}
+ -->    </h1>
+   <div class="source {{tooltipHiddenness}}"></div>
+  </div>
+</template>
