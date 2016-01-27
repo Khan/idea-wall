@@ -40,7 +40,12 @@ if (Meteor.isClient) {
 
     tooltipHiddenness: function() {
       return Session.get("editing") === this._id ? "" : "hide-tooltip"
-    }
+    },
+
+    memoContainerHiddenness: function() {
+      const memo = this.memo
+      return (memo === null || memo === undefined || memo === "") ? "hidden" : "";
+    },
   })
 
   Template.sticky.onRendered(function () {
@@ -104,8 +109,6 @@ if (Meteor.isClient) {
         Tracker.afterFlush(function() {
           const label = event.target.getElementsByClassName("label")[0];
           label.focus();
-          label.selectionStart = 0
-          label.selectionEnd = 1000000
         });
       }
 
@@ -113,12 +116,15 @@ if (Meteor.isClient) {
       event.stopPropagation();
     },
 
-    'blur': function(event) {
-      if (Session.get("editing") === this._id) {
-        const newLabel = Template.instance().find("textarea.label").value;
-        Stickies.update(this._id, {$set: {label: newLabel}});
-        event.stopPropagation();
-      }
+    'change': function(event) {
+      const newLabel = Template.instance().find("textarea.label").value;
+      const newMemo = Template.instance().find("textarea.memo").value;
+      Stickies.update(this._id, {$set: {label: newLabel, memo: newMemo}});
+      event.stopPropagation();
+    },
+
+    'focus textarea.memo': function(event) {
+      Session.set("editing", this._id);
     },
 
     'submit': function(event) {
@@ -130,6 +136,7 @@ if (Meteor.isClient) {
       if (event.keyCode == 13) {
         event.preventDefault();
         submitSticky(this._id, Template.instance())
+        event.target.blur();
       }
     },
 
