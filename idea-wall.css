@@ -100,12 +100,6 @@ h1 {
 	height: 50%;
 }
 
-textarea {
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
-}
-
 .sticky textarea:hover {
 	border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
@@ -118,7 +112,7 @@ textarea {
 	display: block;
 	position: absolute;
 	top: 3px;
-	right: 2px;
+	right: 0px;
 	background: transparent;
 	border-style: none;
 	font-size: 20px;
@@ -160,6 +154,8 @@ textarea {
 	position: absolute;
 	top: 100%;
 	left: 0px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
 
 .sticky .memoContainer form {
