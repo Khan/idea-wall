@@ -7,7 +7,7 @@ body {
 	font-family: "Proxima Nova", "Helvetica", sans-serif;
 	height: 100%;
 	margin: 0px;
-	width: 110in;
+	width: 122in;
 }
 
 #board {
@@ -35,7 +35,7 @@ body {
 }
 
 .aspects {
-	width: 102in;
+	width: 112in;
 	position: absolute;
 	top: 2.75in;
 	left: 15in;
@@ -44,6 +44,10 @@ body {
 .aspect {
 	width: 18in;
 	display: inline-block;
+}
+
+.aspect.form { 
+	width: 36in;
 }
 
 .aspect h1 {
