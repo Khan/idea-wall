@@ -32,6 +32,7 @@ body {
 	left: 2in;
 	width: 8in;
 	font-size: 0.5in;
+	line-height: 0.75in;
 }
 
 .aspects {
@@ -46,6 +47,15 @@ body {
 	display: inline-block;
 }
 
+.aspect ul {
+	margin-top: 0.17in;
+	margin-left: 0.75in;
+}
+
+.aspect li {
+	margin-bottom: 0.17in;
+}
+
 .aspect.form { 
 	width: 48in;
 }
@@ -58,7 +68,7 @@ body {
 
 .aspect h2 {
 	font-size: 0.5in;
-	margin-top: 1.1in;
+	margin-top: 1.2in;
 	color: #555;
 	font-weight: 100;
 }
