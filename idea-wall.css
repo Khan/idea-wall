@@ -7,7 +7,7 @@ body {
 	font-family: "Proxima Nova", "Helvetica", sans-serif;
 	height: 100%;
 	margin: 0px;
-	width: 134in;
+	width: 146in;
 }
 
 #board {
@@ -36,13 +36,14 @@ body {
 }
 
 .aspects {
-	width: 124in;
+	width: 136in;
 	position: absolute;
 	top: 2.75in;
 	left: 15in;
 }
 
 .aspect {
+	vertical-align: top;
 	width: 18in;
 	display: inline-block;
 }
@@ -57,7 +58,7 @@ body {
 }
 
 .aspect.form { 
-	width: 48in;
+	width: 60in;
 }
 
 .aspect h1 {
@@ -72,6 +73,36 @@ body {
 	color: #555;
 	font-weight: 100;
 }
+
+.aspect img {
+	position: relative;
+}
+
+.aspect.substance img {
+	top: -4in;
+	left: 9in;
+}
+
+.aspect.form img {
+	top: -3.2in;
+	left: 10.75in;
+}
+
+.aspect.varying img {
+	top: -5in;
+	left: 10.75in;
+}
+
+.aspect.assessment img {
+	top: -4in;
+	left: 11in;
+}
+
+.aspect.how-we-work img {
+	top: -4in;
+	left: 10.75in;
+}
+
 
 /*.substance {
 	left: 17in;
