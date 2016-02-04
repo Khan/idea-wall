@@ -130,9 +130,9 @@ body {
 	width: 3in;
 	height: 3in;
 	padding: 20px;
-	border-radius: 3px;
+	border-radius: 0.06in;
 
-	background-color: pink;
+	border: 0.03in pink solid;
 }
 
 h1 {
@@ -208,13 +208,16 @@ h1 {
 
 .sticky .memoContainer {
 	width: 100%;
-	background-color: #eee;
+	border: 0.03in #eee solid;
+	border-top: none;
 	height: 0.75in;
 	position: absolute;
 	top: 100%;
 	left: 0px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 0.06in;
+	border-bottom-right-radius: 0.06in;
+	margin-left: -0.03in;
+	margin-top: 0.01in;
 }
 
 .sticky .memoContainer form {
